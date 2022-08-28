@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace FisticularRiskScore
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignInPage : ContentPage
+    public partial class SignUpPage : ContentPage
     {
-        public SignInPage()
+        public SignUpPage()
         {
             InitializeComponent();
         }
 
-        private async void OnSignUp(object sender, EventArgs e)
+        private async void OnSignIn(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SignUpPage());
+            await Navigation.PopAsync();
         }
     }
 }
