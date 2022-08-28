@@ -5,8 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FisticularRiskScore.SignUpPage"
     BackgroundColor="#001e54">
-    <StackLayout Padding="20, 26">
-        <Button Text="Back" Clicked="OnSignIn" />
-        <Label Padding="75, 0, 75, 0" Text="Create an account to get started" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" TextColor="White" />
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" Padding="13, 27">
+            <ImageButton VerticalOptions="Start" WidthRequest="25" HeightRequest="25" Source="ic_back.png" Clicked="OnSignIn" BackgroundColor="Transparent" />
+            <Label
+                Padding="42, 0, 73, 0"
+                Text="Create an account to get started"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                FontAttributes="Bold" FontSize="Title"
+                TextColor="White" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>
