@@ -4,7 +4,28 @@
              x:Class="FisticularRiskScore.SignInPage"
              BackgroundImageSource="ic_background"
              BackgroundColor="red">
-    <StackLayout Padding="60, 105">
-        <Label Text="The Fistula Risck Score Application" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="25" TextColor="White" />
+    <StackLayout Padding="20, 102">
+        <Label Text="The Fistula Risck Score Application" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Title" TextColor="White" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 26, 0, 0">
+            <Label Padding="0, 14, 0, 0" Text="New arround here?" TextColor="White" />
+            <Label Padding="0, 14, 0, 0" Text="Sign Up" FontAttributes="Bold" TextColor="White" TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+        <Entry Margin="0, 25, 0, 0" Placeholder="Enter Email Adress" BackgroundColor="White" Keyboard="Email" HeightRequest="50" />
+        <Entry Margin="0, 13, 0, 0" Placeholder="Enter Password" BackgroundColor="White" IsPassword="True" HeightRequest="50" />
+        <Label Padding="0, 10, 0, 10" Text="Forgot password?" TextColor="White" TextDecorations="Underline" FontSize="Body" HorizontalTextAlignment="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Label.GestureRecognizers>
+        </Label>
+        <Button Text="Sign In" BackgroundColor="Red" CornerRadius="10" HeightRequest="60" TextTransform="None" />
+        <Label Padding="0, 7, 0, 10" Text="Sing In with QR code" TextColor="White" TextDecorations="Underline" HorizontalTextAlignment="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Label.GestureRecognizers>
+        </Label>
     </StackLayout>
 </ContentPage>
