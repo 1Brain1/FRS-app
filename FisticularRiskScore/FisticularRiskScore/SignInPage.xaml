@@ -15,8 +15,11 @@
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
-        <Entry Margin="0, 25, 0, 0" Placeholder="Enter Email Adress" BackgroundColor="White" Keyboard="Email" HeightRequest="50" ReturnType="Next" />
-        <Entry Margin="0, 13, 0, 0" Placeholder="Enter Password" BackgroundColor="White" IsPassword="True" HeightRequest="50" ReturnType="Go" />
+
+        <Entry x:Name="mailEntry" Margin="0, 25, 0, 0" Placeholder="Enter Email Adress" BackgroundColor="White" Keyboard="Email" HeightRequest="50" ReturnType="Next" TextChanged="OnEntriesValidation" />
+        <Label x:Name="labelMailError" TextColor="Red" FontSize="Caption" />
+        <Entry x:Name="passwordEntry" Margin="0, 13, 0, 0" Placeholder="Enter Password" BackgroundColor="White" IsPassword="True" HeightRequest="50" ReturnType="Go" />
+
         <Label Padding="0, 10, 0, 10" Text="Forgot password?" TextColor="White" TextDecorations="Underline" FontSize="Body" HorizontalTextAlignment="Center">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer />
