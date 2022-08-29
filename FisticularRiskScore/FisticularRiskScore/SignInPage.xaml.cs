@@ -25,9 +25,25 @@ namespace FisticularRiskScore
             await Navigation.PushAsync(new SignUpPage());
         }
 
-        private void OnEntriesValidation(object sender, TextChangedEventArgs e)
+        private void OnPasswordValidation(object sender, TextChangedEventArgs e)
         {
-            if (EmailRegex.IsMatch(mailEntry.Text))
+            if (!string.IsNullOrWhiteSpace(passwordEntry.Text))
+            {
+                passwordEntry.TextColor = Color.Default;
+                labelPasswordError.Text = "";
+            }
+            else
+            {
+                passwordEntry.TextColor = Color.Red;
+                labelPasswordError.Text = "Invalid Password";
+            }
+
+            CheckSignInButton();
+        }
+
+        private void OnUserValidation(object sender, TextChangedEventArgs e)
+        {
+            if (EmailRegex.IsMatch(mailEntry.Text) && !string.IsNullOrWhiteSpace(mailEntry.Text))
             {
                 mailEntry.TextColor = Color.Default;
                 labelMailError.Text = "";
@@ -35,7 +51,23 @@ namespace FisticularRiskScore
             else
             {
                 mailEntry.TextColor = Color.Red;
-                labelMailError.Text = "Invalid email adress";
+                labelMailError.Text = "Invalid Email";
+            }
+
+            CheckSignInButton();
+        }
+
+        private void CheckSignInButton()
+        {
+            if (EmailRegex.IsMatch(mailEntry.Text) && !string.IsNullOrWhiteSpace(passwordEntry.Text))
+            {
+                buttonSignIn.TextColor = Color.White;
+                buttonSignIn.IsEnabled = true;
+            }
+            else
+            {
+                buttonSignIn.TextColor = Color.FromHex("#990207");
+                buttonSignIn.IsEnabled = false;
             }
         }
     }
