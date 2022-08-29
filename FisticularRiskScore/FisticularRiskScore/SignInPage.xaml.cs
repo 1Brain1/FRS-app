@@ -29,7 +29,7 @@ namespace FisticularRiskScore
         {
             if (!string.IsNullOrWhiteSpace(passwordEntry.Text))
             {
-                passwordEntry.TextColor = Color.Default;
+                passwordEntry.TextColor = Color.Black;
                 labelPasswordError.Text = "";
             }
             else
@@ -45,7 +45,7 @@ namespace FisticularRiskScore
         {
             if (EmailRegex.IsMatch(mailEntry.Text) && !string.IsNullOrWhiteSpace(mailEntry.Text))
             {
-                mailEntry.TextColor = Color.Default;
+                mailEntry.TextColor = Color.Black;
                 labelMailError.Text = "";
             }
             else
