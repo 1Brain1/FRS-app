@@ -5,16 +5,45 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FisticularRiskScore.SignUpPage"
     BackgroundColor="#001e54">
-    <StackLayout>
-        <StackLayout Orientation="Horizontal" Padding="13, 27">
-            <ImageButton VerticalOptions="Start" WidthRequest="25" HeightRequest="25" Source="ic_back.png" Clicked="OnSignIn" BackgroundColor="Transparent" />
-            <Label
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="13, 26">
+                <ImageButton VerticalOptions="Start" WidthRequest="25" HeightRequest="25" Source="ic_back.png" Clicked="OnSignIn" BackgroundColor="Transparent" />
+                <Label
                 Padding="42, 0, 73, 0"
                 Text="Create an account to get started"
                 HorizontalTextAlignment="Center"
                 VerticalTextAlignment="Center"
                 FontAttributes="Bold" FontSize="Title"
                 TextColor="White" />
+            </StackLayout>
+            <Label
+            TextColor="White"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Bold"
+            Text="Directions: Create account below. Creation of account provides acknowledgement of disclaimer below." />
+            <StackLayout Margin="30, 12" Spacing="23">
+                <Entry Placeholder="First Name" BackgroundColor="White" HeightRequest="45" ReturnType="Next" />
+                <Entry Placeholder="Last Name" BackgroundColor="White" HeightRequest="45" ReturnType="Next" />
+                <Entry Placeholder="Email Adress" Keyboard="Email" BackgroundColor="White" HeightRequest="45" ReturnType="Next" />
+                <Entry Placeholder="Enter Password" IsPassword="True" BackgroundColor="White" HeightRequest="45" ReturnType="Next" />
+                <Entry Placeholder="Confirm Password" IsPassword="True" BackgroundColor="White" HeightRequest="45" ReturnType="Go" />
+                <Button CornerRadius="10" HeightRequest="60" BackgroundColor="#c10213" Text="Sign Up" TextColor="#990207" />
+            </StackLayout>
+            <Label Padding="22"
+            TextColor="White"
+            HorizontalTextAlignment="Center"
+            FontAttributes="Bold"
+            Text="Disclaimer: This application/website is offered as
+                   a: 1) risck assessment tool, 2) best-practice guide for clinic care, 3) personal case-performance
+                   repository/audit mechanism, and 4) educational offering for problem of pancreatic fistula
+                   following pancreatoduodenectomy. It reflects state-of-the-art insights to current knowledge
+                   on topic (circa 2021). Suggestions offered for optimizing clinical care (through the use/disuse
+                   of varios fistula mitigation strategies) are derived from a progression of extensive data analyses
+                   that have been scrutinized by peer review and subsequently published in the academic literature
+                   (amply provided throughout). Proceeding further in to the site implies understanding of this
+                   background, and that the authors and designers of the product cannot be held liable per se for decisions
+                   ultimately made by the user." />
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>
