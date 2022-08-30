@@ -14,7 +14,98 @@
     <ContentPage
         Title="Home"
         IconImageSource="ic_home">
-        
+        <StackLayout
+            Margin="10">
+            <Label
+                Text="The Fistula Risk Score"
+                TextColor="#001e54"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" />
+            <Label
+                Text="(Select a category below)"
+                TextColor="#001e54"
+                FontSize="Caption"
+                HorizontalTextAlignment="Center" />
+            <BoxView
+                Margin="30, 10, 30, 0"
+                Color="#b4bcc9"
+                HeightRequest="1" />
+            <Grid
+                RowDefinitions="1.5*,*,*,*,*,*"
+                BackgroundColor="Aqua">
+                <Image 
+                    Margin="0, 0, 0, 0"
+                    Source="ic_kishki"
+                    Grid.Row="0"
+                    Grid.Column="1" />
+                <BoxView
+                    CornerRadius="13"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3" />
+                <Label
+                    Text="Calculate Case Risk"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#001e54"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3" />
+                <BoxView
+                    CornerRadius="13"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3" />
+                <Label
+                    Text="My Case Log History"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#001e54"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="3" />
+                <BoxView
+                    CornerRadius="13"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3" />
+                <Label
+                    Text="Fistula Literature Learning"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#001e54"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3" />
+                <BoxView
+                    CornerRadius="13"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="3" />
+                <Label
+                    Text="Supporting Research &amp; Bibliography"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#001e54"
+                    Grid.Row="4"
+                    Grid.ColumnSpan="3" />
+                <BoxView
+                    CornerRadius="13"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3" />
+                <Label
+                    Text="Authors &amp; Contributors"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#001e54"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3" />
+            </Grid>
+        </StackLayout>
     </ContentPage>
     <ContentPage
         Title="Considerations"
