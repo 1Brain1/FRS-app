@@ -14,6 +14,8 @@ namespace FisticularRiskScore
     public partial class SignInPage : ContentPage
     {
         private Regex EmailRegex = new Regex(@"^[a-z,A-Z]{1,10}((-|.)\w+)*@\w+.\w[a-z,A-Z]{1,3}$");
+        private const string userEmail = "admin@admin.com";
+        private const string userPassword = "Qwe123!";
 
         public SignInPage()
         {
@@ -23,6 +25,18 @@ namespace FisticularRiskScore
         private async void OnSignUp(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignUpPage());
+        }
+
+        private async void OnSignIn(object sender, EventArgs e)
+        {
+            if (userEmail == mailEntry.Text && userPassword == passwordEntry.Text)
+            {
+                await Navigation.PushAsync(new DashboardPage());
+            }
+            else
+            {
+                await DisplayAlert("Attention", "Wrong Email or Password", "Ok");
+            }
         }
 
         private void OnPasswordValidation(object sender, TextChangedEventArgs e)
