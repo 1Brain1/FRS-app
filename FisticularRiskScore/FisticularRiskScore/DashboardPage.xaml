@@ -1,10 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage NavigationPage.HasNavigationBar="False"
-            xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="FisticularRiskScore.DashboardPage">
-
-    <ContentPage Title="Home">
-        <Label Text="The Fistula Risk Score"  TextColor="#001e54" FontSize="Title" HorizontalTextAlignment="Center" />
+<TabbedPage
+    NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    android:TabbedPage.BarItemColor="White"
+    android:TabbedPage.BarSelectedItemColor="Red"
+    x:Class="FisticularRiskScore.DashboardPage">
+    <TabbedPage.UnselectedTabColor>
+        Black
+    </TabbedPage.UnselectedTabColor>
+    <ContentPage
+        Title="Home"
+        IconImageSource="ic_home">
+        
+    </ContentPage>
+    <ContentPage
+        Title="Considerations"
+        IconImageSource="ic_about">
+        <Label
+            Text="The Fistula Risk Score"
+            TextColor="#001e54"
+            FontSize="Title"
+            HorizontalTextAlignment="Center" />
+    </ContentPage>
+    <ContentPage
+        Title="Video Tutorial"
+        IconImageSource="ic_play">
+        <Label
+            Text="The Fistula Risk Score"
+            TextColor="#001e54"
+            FontSize="Title"
+            HorizontalTextAlignment="Center" />
+    </ContentPage>
+    <ContentPage
+        Title="Thanks"
+        IconImageSource="ic_thanks">
+        <Label
+            Text="The Fistula Risk Score"
+            TextColor="#001e54"
+            FontSize="Title"
+            HorizontalTextAlignment="Center" />
+    </ContentPage>
+    <ContentPage
+        Title="Settings"
+        IconImageSource="ic_settings">
+        <StackLayout>
+            <Label
+                Text="The Fistula Risk Score"
+                TextColor="#001e54"
+                FontSize="Title"
+                HorizontalTextAlignment="Center" />
+        </StackLayout>
     </ContentPage>
 </TabbedPage>
