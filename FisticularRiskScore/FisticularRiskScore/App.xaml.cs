@@ -10,7 +10,7 @@ namespace FisticularRiskScore
         {
             InitializeComponent();
 
-            MainPage = new DashboardPage();
+            MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()
