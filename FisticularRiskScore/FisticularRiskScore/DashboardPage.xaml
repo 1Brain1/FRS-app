@@ -117,20 +117,24 @@
         </Grid>
     </ContentPage>
     <ContentPage
+        Padding="30, 10, 30, 30"
         Title="Considerations"
         IconImageSource="ic_about">
         <Label
-            Text=""
+            Text="Considerations"
             TextColor="#001e54"
+            FontAttributes="Bold"
             FontSize="Title"
             HorizontalTextAlignment="Center" />
     </ContentPage>
     <ContentPage
+        Padding="30, 10, 30, 30"
         Title="Video Tutorial"
         IconImageSource="ic_play">
         <Label
-            Text=""
+            Text="Video Tutorial"
             TextColor="#001e54"
+            FontAttributes="Bold"
             FontSize="Title"
             HorizontalTextAlignment="Center" />
     </ContentPage>
@@ -138,20 +142,36 @@
         Title="Thanks"
         IconImageSource="ic_thanks">
         <Label
-            Text=""
+            Padding="30, 10, 30, 30"
+            Text="Thanks"
             TextColor="#001e54"
+            FontAttributes="Bold"
             FontSize="Title"
             HorizontalTextAlignment="Center" />
     </ContentPage>
     <ContentPage
         Title="Settings"
         IconImageSource="ic_settings">
-        <StackLayout>
+        <StackLayout
+            Padding="30, 10, 30, 30">
             <Label
-                Text=""
+                Text="Settings"
                 TextColor="#001e54"
+                FontAttributes="Bold"
                 FontSize="Title"
                 HorizontalTextAlignment="Center" />
+            <StackLayout
+                VerticalOptions="EndAndExpand">
+                <Button
+                    x:Name="buttonSignIn"
+                    Text="Exit"
+                    BackgroundColor="#c10213"
+                    CornerRadius="10"
+                    HeightRequest="60"
+                    TextTransform="None"
+                    TextColor="White"
+                    Clicked="OnSignIn" />
+            </StackLayout>
         </StackLayout>
     </ContentPage>
 </TabbedPage>
