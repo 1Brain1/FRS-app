@@ -8,6 +8,7 @@
     android:TabbedPage.ToolbarPlacement="Bottom"
     android:TabbedPage.BarItemColor="White"
     android:TabbedPage.BarSelectedItemColor="Red"
+    xmlns:local="clr-namespace:FisticularRiskScore.Extensions"
     x:Class="FisticularRiskScore.DashboardPage">
     <TabbedPage.UnselectedTabColor>
         Black
@@ -44,76 +45,31 @@
                 Source="ic_kishki"
                 Grid.Row="1"
                 Grid.Column="1" />
-            <Frame
-                BorderColor="#0b1d3a"
-                BackgroundColor="White"
-                CornerRadius="13"
+
+            <local:MyCustomButton
+                Label="Calculate Case Risk"
                 Grid.Row="2"
-                Grid.ColumnSpan="3">
-                <Label
-                    Text="Calculate Case Risk"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#001e54" />
-            </Frame>
-            <Frame
-                BorderColor="#0b1d3a"
-                BackgroundColor="White"
-                CornerRadius="13"
+                Grid.ColumnSpan="3" />
+
+            <local:MyCustomButton
+                Label="My Case Log History"
                 Grid.Row="3"
-                Grid.ColumnSpan="3">
-                <Label
-                    Text="My Case Log History"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#001e54" />
-            </Frame>
-            <Frame
-                BorderColor="#0b1d3a"
-                BackgroundColor="White"
-                CornerRadius="13"
+                Grid.ColumnSpan="3" />
+
+            <local:MyCustomButton
+                Label="Fistula Literature Learning"
                 Grid.Row="4"
-                Grid.ColumnSpan="3">
-                <Label
-                    Text="Fistula Literature Learning"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#001e54" />
-            </Frame>
-            <Frame
-                BorderColor="#0b1d3a"
-                BackgroundColor="White"
-                CornerRadius="13"
+                Grid.ColumnSpan="3" />
+
+            <local:MyCustomButton
+                Label="Supporting Research &amp; Bibliography"
                 Grid.Row="5"
-                Grid.ColumnSpan="3">
-                <Label
-                    Text="Supporting Research &amp; Bibliography"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#001e54" />
-            </Frame>
-            <Frame
-                BorderColor="#0b1d3a"
-                BackgroundColor="White"
-                CornerRadius="13"
+                Grid.ColumnSpan="3" />
+
+            <local:MyCustomButton
+                Label="Authors &amp; Contributors"
                 Grid.Row="6"
-                Grid.ColumnSpan="3">
-                <Label
-                    Text="Authors &amp; Contributors"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    VerticalTextAlignment="Center"
-                    HorizontalTextAlignment="Center"
-                    TextColor="#001e54" />
-            </Frame>
+                Grid.ColumnSpan="3" />
         </Grid>
     </ContentPage>
     <ContentPage
