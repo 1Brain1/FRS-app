@@ -15,6 +15,11 @@ namespace FisticularRiskScore
         public SignInPage()
         {
             InitializeComponent();
+            passwordEntry.OnChangedText -= OnPasswordValidation;
+            passwordEntry.OnChangedText += OnPasswordValidation;
+
+            mailEntry.OnChangedText -= OnUserValidation;
+            mailEntry.OnChangedText += OnUserValidation;
         }
 
         private async void OnSignUp(object sender, EventArgs e)

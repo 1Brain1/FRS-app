@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FisticularRiskScore.SignInPage"
+    xmlns:local="clr-namespace:FisticularRiskScore.Extensions"
     BackgroundImageSource="ic_background">
     <StackLayout
         Padding="20, 102">
@@ -33,34 +34,31 @@
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
-        <Entry
+
+        <local:MyCustomEntry
             x:Name="mailEntry"
-            Text="admin@admin.com"
             Margin="0, 25, 0, 0"
+            Text="admin@admin.com"
             Placeholder="Enter Email Adress"
-            BackgroundColor="White"
             Keyboard="Email"
-            HeightRequest="50"
-            ReturnType="Next"
-            TextChanged="OnUserValidation" />
+            ReturnType="Next" />
         <Label
             x:Name="labelMailError"
             TextColor="Red"
             FontSize="Caption" />
-        <Entry
+
+        <local:MyCustomEntry
             x:Name="passwordEntry"
-            Text="Qwe123!"
             Margin="0, 13, 0, 0"
+            Text="Qwe123!"
             Placeholder="Enter Password"
-            BackgroundColor="White"
             IsPassword="True"
-            HeightRequest="50"
-            ReturnType="Go"
-            TextChanged="OnPasswordValidation" />
+            ReturnType="Go" />
         <Label
             x:Name="labelPasswordError"
             TextColor="Red"
             FontSize="Caption" />
+
         <Label
             Padding="0, 10, 0, 10"
             Text="Forgot password?"

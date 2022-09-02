@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FisticularRiskScore.Extensions.MyCustomEntry">
+    <Entry
+        x:Name="entryView"
+        BackgroundColor="White"
+        HeightRequest="50"
+        TextColor="{Binding TextColor}"
+        Text="{Binding Text}"
+        Placeholder="{Binding Placeholder}"
+        Keyboard="{Binding Keyboard}"
+        ReturnType="{Binding ReturnType}"
+        IsPassword="{Binding IsPassword}" />
+</ContentView>
