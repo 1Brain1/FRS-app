@@ -3,14 +3,23 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="FisticularRiskScore.Extensions.MyCustomEntry">
-    <Entry
-        x:Name="entryView"
-        BackgroundColor="White"
-        HeightRequest="50"
-        TextColor="{Binding TextColor}"
-        Text="{Binding Text}"
-        Placeholder="{Binding Placeholder}"
-        Keyboard="{Binding Keyboard}"
-        ReturnType="{Binding ReturnType}"
-        IsPassword="{Binding IsPassword}" />
+    <Grid
+        RowDefinitions="50">
+        <Entry
+            x:Name="entryView"
+            BackgroundColor="White"
+            HeightRequest="50"
+            Grid.Row="0"
+            Grid.ColumnSpan="3" />
+        <Image
+            x:Name="cheking"
+            IsVisible="False"
+            Grid.Row="0"
+            Grid.ColumnSpan="3"
+            HorizontalOptions="EndAndExpand"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="20"
+            HeightRequest="20"
+            BackgroundColor="Transparent" />
+    </Grid>
 </ContentView>

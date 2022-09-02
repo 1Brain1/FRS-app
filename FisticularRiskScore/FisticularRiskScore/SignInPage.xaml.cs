@@ -41,15 +41,17 @@ namespace FisticularRiskScore
 
         private void OnPasswordValidation(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(passwordEntry.Text))
+            if (!string.IsNullOrWhiteSpace(passwordEntry.Text) && passwordEntry.Text.Length >= 4)
             {
                 passwordEntry.TextColor = Color.Black;
                 labelPasswordError.Text = "";
+                passwordEntry.IsChecked = true;
             }
             else
             {
                 passwordEntry.TextColor = Color.Red;
                 labelPasswordError.Text = "Invalid Password";
+                passwordEntry.IsChecked = false;
             }
 
             CheckSignInButton();
@@ -61,11 +63,13 @@ namespace FisticularRiskScore
             {
                 mailEntry.TextColor = Color.Black;
                 labelMailError.Text = "";
+                mailEntry.IsChecked = true;
             }
             else
             {
                 mailEntry.TextColor = Color.Red;
                 labelMailError.Text = "Invalid Email";
+                mailEntry.IsChecked = false;
             }
 
             CheckSignInButton();

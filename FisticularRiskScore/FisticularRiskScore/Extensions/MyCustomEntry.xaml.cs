@@ -26,6 +26,9 @@ namespace FisticularRiskScore.Extensions
         public static readonly BindableProperty IsPasswordProperty =
             BindableProperty.Create("IsPassword", typeof(Boolean), typeof(MyCustomEntry), false, BindingMode.TwoWay);
 
+        public static readonly BindableProperty IsCheckedProperty =
+            BindableProperty.Create(nameof(IsChecked), typeof(Boolean), typeof(MyCustomEntry), true, BindingMode.TwoWay);
+
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
@@ -62,6 +65,12 @@ namespace FisticularRiskScore.Extensions
             set { SetValue(IsPasswordProperty, value); }
         }
 
+        public bool IsChecked
+        {
+            get { return (bool)GetValue(IsCheckedProperty); }
+            set { SetValue(IsCheckedProperty, value); }
+        }
+
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = default)
         {
             base.OnPropertyChanged(propertyName);
@@ -94,6 +103,12 @@ namespace FisticularRiskScore.Extensions
             if (propertyName == IsPasswordProperty.PropertyName)
             {
                 entryView.IsPassword = IsPassword;
+            }
+
+            if (propertyName == IsCheckedProperty.PropertyName)
+            {
+                cheking.IsVisible = true;
+                cheking.Source = IsChecked ? "ic_true.png" : "ic_false.png";
             }
         }
 
