@@ -14,7 +14,9 @@ namespace FisticularRiskScore
 
         private async void OnSignIn(object sender, EventArgs e)
         {
-            await Navigation.PopAsync();
+            var response = await DisplayAlert("", "Are you sure to exit", "Yes", "No");
+            if (response)
+                await Navigation.PopAsync();
         }
     }
 }
