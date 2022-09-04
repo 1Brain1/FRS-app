@@ -38,6 +38,7 @@
             </StackLayout>
 
             <local:MyCustomEntry
+                Text="admin@admi.com"
                 x:Name="mailEntry"
                 Margin="0, 25, 0, 0"
                 Placeholder="Enter Email Adress"
@@ -49,6 +50,7 @@
                 FontSize="Caption" />
 
             <local:MyCustomEntry
+                Text="Qwe123!"
                 x:Name="passwordEntry"
                 Margin="0, 13, 0, 0"
                 Placeholder="Enter Password"

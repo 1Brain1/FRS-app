@@ -118,6 +118,9 @@
                 HorizontalTextAlignment="Center" />
             <StackLayout
                 VerticalOptions="EndAndExpand">
+                <Label
+                    Text="App version: 1.0"
+                    HorizontalOptions="EndAndExpand" />
                 <Button
                     x:Name="buttonSignIn"
                     Text="Exit"
