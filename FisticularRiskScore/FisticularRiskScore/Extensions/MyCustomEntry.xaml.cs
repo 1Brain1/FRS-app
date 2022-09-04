@@ -9,22 +9,22 @@ namespace FisticularRiskScore.Extensions
     public partial class MyCustomEntry : ContentView
     {
         public static readonly BindableProperty TextProperty =
-            BindableProperty.Create("Text", typeof(string), typeof(MyCustomEntry), string.Empty, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(Text), typeof(string), typeof(MyCustomEntry), string.Empty, BindingMode.TwoWay);
 
         public static readonly BindableProperty TextColorPropetry =
-            BindableProperty.Create("TextColor", typeof(Color), typeof(MyCustomEntry), Color.Default, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(MyCustomEntry), Color.Default, BindingMode.TwoWay);
 
         public static readonly BindableProperty PlaceholderProperty =
-            BindableProperty.Create("Placeholder", typeof(string), typeof(MyCustomEntry), string.Empty, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(Placeholder), typeof(string), typeof(MyCustomEntry), string.Empty, BindingMode.TwoWay);
 
         public static readonly BindableProperty KeyboardProperty =
-            BindableProperty.Create("Keyboard", typeof(Keyboard), typeof(MyCustomEntry), Xamarin.Forms.Keyboard.Default, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(Keyboard), typeof(Keyboard), typeof(MyCustomEntry), Xamarin.Forms.Keyboard.Default, BindingMode.TwoWay);
 
         public static readonly BindableProperty ReturnTypeProperty =
-            BindableProperty.Create("ReturnType", typeof(ReturnType), typeof(MyCustomEntry), Xamarin.Forms.ReturnType.Default, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(ReturnType), typeof(ReturnType), typeof(MyCustomEntry), Xamarin.Forms.ReturnType.Default, BindingMode.TwoWay);
 
         public static readonly BindableProperty IsPasswordProperty =
-            BindableProperty.Create("IsPassword", typeof(Boolean), typeof(MyCustomEntry), false, BindingMode.TwoWay);
+            BindableProperty.Create(nameof(IsPassword), typeof(Boolean), typeof(MyCustomEntry), false, BindingMode.TwoWay);
 
         public static readonly BindableProperty IsCheckedProperty =
             BindableProperty.Create(nameof(IsChecked), typeof(Boolean), typeof(MyCustomEntry), true, BindingMode.TwoWay);
