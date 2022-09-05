@@ -38,7 +38,7 @@
             </StackLayout>
 
             <local:MyCustomEntry
-                Text="admin@admi.com"
+                Text="admin@admin.com"
                 x:Name="mailEntry"
                 Margin="0, 25, 0, 0"
                 Placeholder="Enter Email Adress"
