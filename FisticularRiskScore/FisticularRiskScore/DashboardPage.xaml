@@ -20,7 +20,7 @@
             VerticalOptions="Center"
             HorizontalOptions="Center"
             Margin="10"
-            RowDefinitions="91,*,*,*,*,*,*">
+            RowDefinitions="Auto,*,*,*,*,*,*">
             <StackLayout
                 Grid.Row="0"
                 Grid.ColumnSpan="3"
