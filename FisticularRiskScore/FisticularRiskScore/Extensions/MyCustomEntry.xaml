@@ -14,6 +14,7 @@
             Grid.Row="0"
             Grid.ColumnSpan="3">
             <Entry
+                HorizontalTextAlignment="Center"
                 x:Name="entryView"
                 BackgroundColor="Transparent"
                 HeightRequest="50">
