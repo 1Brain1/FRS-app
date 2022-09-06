@@ -38,6 +38,7 @@
             </StackLayout>
 
             <local:MyCustomEntry
+                CornerRadius="9"
                 Text="admin@admin.com"
                 x:Name="mailEntry"
                 Margin="0, 25, 0, 0"
@@ -50,6 +51,7 @@
                 FontSize="Caption" />
 
             <local:MyCustomEntry
+                CornerRadius="9"
                 Text="Qwe123!"
                 x:Name="passwordEntry"
                 Margin="0, 13, 0, 0"

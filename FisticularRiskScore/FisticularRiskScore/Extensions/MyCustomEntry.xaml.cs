@@ -29,6 +29,9 @@ namespace FisticularRiskScore.Extensions
         public static readonly BindableProperty IsCheckedProperty =
             BindableProperty.Create(nameof(IsChecked), typeof(Boolean), typeof(MyCustomEntry), true, BindingMode.TwoWay);
 
+        public static readonly BindableProperty CornerRadiusProperty =
+            BindableProperty.Create(nameof(CornerRadius), typeof(float), typeof(MyCustomEntry), 0f, BindingMode.TwoWay);
+
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
@@ -71,6 +74,12 @@ namespace FisticularRiskScore.Extensions
             set { SetValue(IsCheckedProperty, value); }
         }
 
+        public float CornerRadius
+        {
+            get { return (float)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
+        }
+
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = default)
         {
             base.OnPropertyChanged(propertyName);
@@ -109,6 +118,11 @@ namespace FisticularRiskScore.Extensions
             {
                 cheking.IsVisible = true;
                 cheking.Source = IsChecked ? "ic_true.png" : "ic_false.png";
+            }
+
+            if (propertyName == CornerRadiusProperty.PropertyName)
+            {
+                frameEntryView.CornerRadius = CornerRadius;
             }
         }
 
