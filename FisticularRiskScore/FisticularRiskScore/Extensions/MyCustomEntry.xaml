@@ -2,15 +2,27 @@
 <ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:effects="clr-namespace:FisticularRiskScore.Effects"
     x:Class="FisticularRiskScore.Extensions.MyCustomEntry">
     <Grid
         RowDefinitions="50">
-        <Entry
-            x:Name="entryView"
-            BackgroundColor="White"
+        <Frame
+            x:Name="frameEntryView"
+            Padding="0"
             HeightRequest="50"
+            BackgroundColor="White"
             Grid.Row="0"
-            Grid.ColumnSpan="3" />
+            Grid.ColumnSpan="3">
+            <Entry
+                HorizontalTextAlignment="Center"
+                x:Name="entryView"
+                BackgroundColor="Transparent"
+                HeightRequest="50">
+                <Entry.Effects>
+                    <effects:PlainEntry />
+                </Entry.Effects>
+            </Entry>
+        </Frame>
         <Image
             x:Name="cheking"
             IsVisible="False"
