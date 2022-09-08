@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static FisticularRiskScore.LanguagePage;
@@ -12,6 +13,11 @@ namespace FisticularRiskScore
         public DashboardPage()
         {
             InitializeComponent();
+        }
+
+        public interface ILocalize
+        {
+            CultureInfo GetCurrentCultureInfo();
         }
 
         private async void OnSignIn(object sender, EventArgs e)
