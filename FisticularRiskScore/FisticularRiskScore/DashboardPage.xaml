@@ -117,6 +117,24 @@
                 FontAttributes="Bold"
                 FontSize="Title"
                 HorizontalTextAlignment="Center" />
+
+            <StackLayout
+                Orientation="Horizontal"
+                Padding="13, 5">
+                <Label
+                    Text="Select language"
+                    VerticalOptions="Center" />
+                <Label
+                    x:Name="languageSelected"
+                    VerticalOptions="Center"
+                    HorizontalOptions="EndAndExpand"
+                    Text="None"
+                    TextColor="Gray" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnSelectingLanguage" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
             <StackLayout
                 VerticalOptions="EndAndExpand">
                 <Label
