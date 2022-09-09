@@ -11,12 +11,13 @@ namespace FisticularRiskScore
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        private readonly CultureInfo ci;
+        private static CultureInfo ci;
+        public static string currentLanguage = "en-US";
         private const string ResourceId = "FisticularRiskScore.Resources.Resource";
 
         public TranslateExtension()
         {
-            ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+            ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo(currentLanguage);
         }
 
         public string Text { get; set; }

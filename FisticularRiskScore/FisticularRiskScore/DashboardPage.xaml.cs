@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FisticularRiskScore.Helper;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using Xamarin.Forms;
@@ -10,21 +11,26 @@ namespace FisticularRiskScore
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardPage : TabbedPage
     {
-        public DashboardPage()
+        public DashboardPage(string currentLang = null)
         {
             InitializeComponent();
+
+            if (currentLang != null)
+                languageSelected.Text = currentLang;
         }
 
         public interface ILocalize
         {
-            CultureInfo GetCurrentCultureInfo();
+            CultureInfo GetCurrentCultureInfo(string currentLanguage);
         }
 
         private async void OnSignIn(object sender, EventArgs e)
         {
-            var response = await DisplayAlert("", "Are you sure to exit", "Yes", "No");
+            var response = await DisplayAlert("", LocalizationHelper.Localize("AlertMessage"),
+                LocalizationHelper.Localize("AlertPositiveButton"),
+                LocalizationHelper.Localize("AlertNegativeButton"));
             if (response)
-                await Navigation.PopAsync();
+                await Navigation.PushAsync(new SignInPage());
         }
 
         private void OnSelectingLanguage(object sender, EventArgs e)
@@ -34,9 +40,9 @@ namespace FisticularRiskScore
             {
                 var selectedItem = args.SelectedItem as Language;
                 languageSelected.Text = selectedItem.Name;
-                //return new System.Globalization.CultureInfo(selectedItem.Sign);
 
-                Navigation.PopAsync();
+                TranslateExtension.currentLanguage = selectedItem.Sign;
+                Navigation.PushAsync(new DashboardPage(selectedItem.Name));
                 //Debug.WriteLine(selectedItem.Sign);
             };
             Navigation.PushAsync(page);

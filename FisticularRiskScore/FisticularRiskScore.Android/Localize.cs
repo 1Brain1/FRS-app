@@ -7,11 +7,9 @@ namespace FisticularRiskScore.Droid
 {
     public class Localize : ILocalize
     {
-        public System.Globalization.CultureInfo GetCurrentCultureInfo()
+        public System.Globalization.CultureInfo GetCurrentCultureInfo(string currentLanguage)
         {
-            var androidLocale = Java.Util.Locale.Default;
-            var netLanguage = androidLocale.ToString().Replace("_", "-");
-            return new System.Globalization.CultureInfo(netLanguage);
+            return new System.Globalization.CultureInfo(currentLanguage);
         }
     }
 }
