@@ -1,5 +1,4 @@
-﻿using FisticularRiskScore.Helper;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,8 +22,8 @@ namespace FisticularRiskScore
 
             languageList.ItemsSource = new List<Language>
             {
-                new Language {Id = 1, Name = "English", Sign="en-US" },
-                new Language {Id = 2, Name = "Russian", Sign="ru-RU" }
+                new Language {Id = 1, Name = TranslateExtension.LocalizeHelper("LanguageEN"), Sign="en-US" },
+                new Language {Id = 2, Name = TranslateExtension.LocalizeHelper("LanguageRU"), Sign="ru-RU" }
             };
         }
 

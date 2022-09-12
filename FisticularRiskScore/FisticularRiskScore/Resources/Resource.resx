@@ -129,22 +129,74 @@
   <data name="AppVersion" xml:space="preserve">
     <value>App version: 1.0</value>
   </data>
-  <data name="ContentTitle" xml:space="preserve">
-    <value>Settings</value>
+  <data name="AuthorsButton" xml:space="preserve">
+    <value>Authors &amp; Contributors</value>
+    <comment>Authors &amp;amp; Contributors</comment>
+  </data>
+  <data name="BibliographyButton" xml:space="preserve">
+    <value>Supporting Research &amp; Bibliography</value>
+    <comment>Supporting Research &amp;amp;  Bibliography</comment>
+  </data>
+  <data name="CalcButton" xml:space="preserve">
+    <value>Calculate Case Risk</value>
+    <comment>Calculate Case Risk</comment>
+  </data>
+  <data name="ConsidirationsContentTitle" xml:space="preserve">
+    <value>Considirations</value>
+  </data>
+  <data name="ConsidirationsLableTitle" xml:space="preserve">
+    <value>Considirations</value>
   </data>
   <data name="ExitButton" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="LabelTitle" xml:space="preserve">
-    <value>Settings</value>
+  <data name="HistoryButton" xml:space="preserve">
+    <value>My Case Log History</value>
+    <comment>My Case Log History</comment>
+  </data>
+  <data name="HomeContentTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomeLableAnnotation" xml:space="preserve">
+    <value>(Select a category below)</value>
+    <comment>(Select a category below)</comment>
+  </data>
+  <data name="HomeLableTitle" xml:space="preserve">
+    <value>The Fistula Risk Score</value>
+    <comment>The Fistula Risk Score</comment>
   </data>
   <data name="LanguageEN" xml:space="preserve">
     <value>English</value>
+  </data>
+  <data name="LanguageRU" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="LiteratureButton" xml:space="preserve">
+    <value>Fistula Literature Learning</value>
+    <comment>Fistula Literature Learning</comment>
   </data>
   <data name="SelectedLanguage" xml:space="preserve">
     <value>System</value>
   </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>Select language</value>
+  </data>
+  <data name="SettingsContentTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsLableTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ThanksContentTitle" xml:space="preserve">
+    <value>Thanks</value>
+  </data>
+  <data name="ThanksLableTitle" xml:space="preserve">
+    <value>Thanks</value>
+  </data>
+  <data name="TutorialContentTitle" xml:space="preserve">
+    <value>Video Tutorial</value>
+  </data>
+  <data name="TutorialLabelTitle" xml:space="preserve">
+    <value>Video Tutorial</value>
   </data>
 </root>

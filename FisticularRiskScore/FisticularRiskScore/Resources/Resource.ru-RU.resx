@@ -129,22 +129,74 @@
   <data name="AppVersion" xml:space="preserve">
     <value>Версия приложения: 1.0</value>
   </data>
-  <data name="ContentTitle" xml:space="preserve">
-    <value>Настройки</value>
+  <data name="AuthorsButton" xml:space="preserve">
+    <value>Авторы &amp; Соавторы</value>
+    <comment>Authors &amp;amp; Contributors</comment>
+  </data>
+  <data name="BibliographyButton" xml:space="preserve">
+    <value>Вспомогательные исследования &amp; Библиография</value>
+    <comment>Supporting Research &amp;amp;  Bibliography</comment>
+  </data>
+  <data name="CalcButton" xml:space="preserve">
+    <value>Расчитать риски для:</value>
+    <comment>Calculate Case Risk</comment>
+  </data>
+  <data name="ConsidirationsContentTitle" xml:space="preserve">
+    <value>Консультации</value>
+  </data>
+  <data name="ConsidirationsLableTitle" xml:space="preserve">
+    <value>Консультации</value>
   </data>
   <data name="ExitButton" xml:space="preserve">
     <value>Выход</value>
   </data>
-  <data name="LabelTitle" xml:space="preserve">
-    <value>Настройки</value>
+  <data name="HistoryButton" xml:space="preserve">
+    <value>История журнала болезни</value>
+    <comment>My Case Log History</comment>
+  </data>
+  <data name="HomeContentTitle" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="HomeLableAnnotation" xml:space="preserve">
+    <value>(Выберите категорию)</value>
+    <comment>(Select a category below)</comment>
+  </data>
+  <data name="HomeLableTitle" xml:space="preserve">
+    <value>Показатель риска фистулы</value>
+    <comment>The Fistula Risk Score</comment>
+  </data>
+  <data name="LanguageEN" xml:space="preserve">
+    <value>Английский</value>
   </data>
   <data name="LanguageRU" xml:space="preserve">
     <value>Русский</value>
+  </data>
+  <data name="LiteratureButton" xml:space="preserve">
+    <value>Литература по фистуле</value>
+    <comment>Fistula Literature Learning</comment>
   </data>
   <data name="SelectedLanguage" xml:space="preserve">
     <value>Системный</value>
   </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>Выберите язык</value>
+  </data>
+  <data name="SettingsContentTitle" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SettingsLableTitle" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="ThanksContentTitle" xml:space="preserve">
+    <value>Благодарность</value>
+  </data>
+  <data name="ThanksLableTitle" xml:space="preserve">
+    <value>Благодарность</value>
+  </data>
+  <data name="TutorialContentTitle" xml:space="preserve">
+    <value>Видеоинструкция</value>
+  </data>
+  <data name="TutorialLabelTitle" xml:space="preserve">
+    <value>Видеоинструкция</value>
   </data>
 </root>

@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Reflection;
 using static FisticularRiskScore.DashboardPage;
 using System;
+using FisticularRiskScore.Resources;
 
 namespace FisticularRiskScore
 {
@@ -37,6 +38,15 @@ namespace FisticularRiskScore
                 translation = Text;
             }
             return translation;
+        }
+
+        public static string LocalizeHelper(string key)
+        {
+            string ret = string.Empty;
+
+            ret = Resource.ResourceManager.GetString(key, ci);
+
+            return ret;
         }
     }
 }

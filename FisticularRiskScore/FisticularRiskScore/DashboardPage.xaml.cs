@@ -1,5 +1,4 @@
-﻿using FisticularRiskScore.Helper;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Globalization;
 using Xamarin.Forms;
@@ -26,9 +25,9 @@ namespace FisticularRiskScore
 
         private async void OnSignIn(object sender, EventArgs e)
         {
-            var response = await DisplayAlert("", LocalizationHelper.Localize("AlertMessage"),
-                LocalizationHelper.Localize("AlertPositiveButton"),
-                LocalizationHelper.Localize("AlertNegativeButton"));
+            var response = await DisplayAlert("", TranslateExtension.LocalizeHelper("AlertMessage"),
+                TranslateExtension.LocalizeHelper("AlertPositiveButton"),
+                TranslateExtension.LocalizeHelper("AlertNegativeButton"));
             if (response)
                 await Navigation.PushAsync(new SignInPage());
         }
@@ -40,7 +39,7 @@ namespace FisticularRiskScore
             {
                 var selectedItem = args.SelectedItem as Language;
                 languageSelected.Text = selectedItem.Name;
-                
+
                 if (TranslateExtension.currentLanguage != selectedItem.Sign)
                 {
                     TranslateExtension.currentLanguage = selectedItem.Sign;
