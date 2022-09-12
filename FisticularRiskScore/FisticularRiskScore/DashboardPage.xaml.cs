@@ -40,9 +40,14 @@ namespace FisticularRiskScore
             {
                 var selectedItem = args.SelectedItem as Language;
                 languageSelected.Text = selectedItem.Name;
-
-                TranslateExtension.currentLanguage = selectedItem.Sign;
-                Navigation.PushAsync(new DashboardPage(selectedItem.Name));
+                
+                if (TranslateExtension.currentLanguage != selectedItem.Sign)
+                {
+                    TranslateExtension.currentLanguage = selectedItem.Sign;
+                    Navigation.PushAsync(new DashboardPage(selectedItem.Name));
+                }
+                else
+                    Navigation.PopAsync();
                 //Debug.WriteLine(selectedItem.Sign);
             };
             Navigation.PushAsync(page);

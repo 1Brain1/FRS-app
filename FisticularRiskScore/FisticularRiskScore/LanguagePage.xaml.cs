@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using FisticularRiskScore.Helper;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
