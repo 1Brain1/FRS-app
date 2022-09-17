@@ -9,12 +9,13 @@
     android:TabbedPage.BarItemColor="White"
     android:TabbedPage.BarSelectedItemColor="Red"
     xmlns:local="clr-namespace:FisticularRiskScore.Extensions"
+    xmlns:translate="clr-namespace:FisticularRiskScore;assembly=FisticularRiskScore"
     x:Class="FisticularRiskScore.DashboardPage">
     <TabbedPage.UnselectedTabColor>
         Black
     </TabbedPage.UnselectedTabColor>
     <ContentPage
-        Title="Home"
+        Title="{translate:Translate HomeContentTitle}"
         IconImageSource="ic_home">
         <Grid
             VerticalOptions="Center"
@@ -26,13 +27,13 @@
                 Grid.ColumnSpan="3"
                 Margin="0, 10, 0, 10">
                 <Label
-                    Text="The Fistula Risk Score"
+                    Text="{translate:Translate HomeLableTitle}"
                     TextColor="#001e54"
                     FontSize="Title"
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center" />
                 <Label
-                    Text="(Select a category below)"
+                    Text="{translate:Translate HomeLableAnnotation}"
                     TextColor="#001e54"
                     FontSize="Caption"
                     HorizontalTextAlignment="Center" />
@@ -48,37 +49,37 @@
                 Grid.Column="1" />
 
             <local:MyCustomButton
-                Label="Calculate Case Risk"
+                Label="{translate:Translate CalcButton}"
                 Grid.Row="2"
                 Grid.ColumnSpan="3" />
 
             <local:MyCustomButton
-                Label="My Case Log History"
+                Label="{translate:Translate HistoryButton}"
                 Grid.Row="3"
                 Grid.ColumnSpan="3" />
 
             <local:MyCustomButton
-                Label="Fistula Literature Learning"
+                Label="{translate:Translate LiteratureButton}"
                 Grid.Row="4"
                 Grid.ColumnSpan="3" />
 
             <local:MyCustomButton
-                Label="Supporting Research &amp; Bibliography"
+                Label="{translate:Translate BibliographyButton}"
                 Grid.Row="5"
                 Grid.ColumnSpan="3" />
 
             <local:MyCustomButton
-                Label="Authors &amp; Contributors"
+                Label="{translate:Translate AuthorsButton}"
                 Grid.Row="6"
                 Grid.ColumnSpan="3" />
         </Grid>
     </ContentPage>
     <ContentPage
         Padding="30, 10, 30, 30"
-        Title="Considerations"
+        Title="{translate:Translate ConsidirationsContentTitle}"
         IconImageSource="ic_about">
         <Label
-            Text="Considerations"
+            Text="{translate:Translate ConsidirationsLableTitle}"
             TextColor="#001e54"
             FontAttributes="Bold"
             FontSize="Title"
@@ -86,45 +87,63 @@
     </ContentPage>
     <ContentPage
         Padding="30, 10, 30, 30"
-        Title="Video Tutorial"
+        Title="{translate:Translate TutorialContentTitle}"
         IconImageSource="ic_play">
         <Label
-            Text="Video Tutorial"
+            Text="{translate:Translate TutorialLabelTitle}"
             TextColor="#001e54"
             FontAttributes="Bold"
             FontSize="Title"
             HorizontalTextAlignment="Center" />
     </ContentPage>
     <ContentPage
-        Title="Thanks"
+        Title="{translate:Translate ThanksContentTitle}"
         IconImageSource="ic_thanks">
         <Label
             Padding="30, 10, 30, 30"
-            Text="Thanks"
+            Text="{translate:Translate ThanksLableTitle}"
             TextColor="#001e54"
             FontAttributes="Bold"
             FontSize="Title"
             HorizontalTextAlignment="Center" />
     </ContentPage>
     <ContentPage
-        Title="Settings"
+        Title="{translate:Translate SettingsContentTitle}"
         IconImageSource="ic_settings">
         <StackLayout
             Padding="30, 10, 30, 30">
             <Label
-                Text="Settings"
+                Text="{translate:Translate SettingsLableTitle}"
                 TextColor="#001e54"
                 FontAttributes="Bold"
                 FontSize="Title"
                 HorizontalTextAlignment="Center" />
+
+            <StackLayout
+                Orientation="Horizontal"
+                Padding="13, 5">
+                <Label
+                    Text="{translate:Translate SelectLanguage}"
+                    VerticalOptions="Center" />
+                <Label
+                    x:Name="languageSelected"
+                    VerticalOptions="Center"
+                    HorizontalOptions="EndAndExpand"
+                    Text="{translate:Translate SelectedLanguage}"
+                    TextColor="Gray" />
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnSelectingLanguage" />
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
             <StackLayout
                 VerticalOptions="EndAndExpand">
                 <Label
-                    Text="App version: 1.0"
+                    Text="{translate:Translate AppVersion}"
                     HorizontalOptions="CenterAndExpand" />
                 <Button
                     x:Name="buttonSignIn"
-                    Text="Exit"
+                    Text="{translate:Translate ExitButton}"
                     BackgroundColor="#c10213"
                     CornerRadius="10"
                     HeightRequest="60"
