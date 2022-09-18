@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -82,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FisticularRiskScore\FisticularRiskScore.csproj">
-      <Project>{8CBFC3C1-64E6-40E5-B703-194D92E91186}</Project>
+      <Project>{F8A2DF0E-D855-4C37-846A-E3A017336003}</Project>
       <Name>FisticularRiskScore</Name>
     </ProjectReference>
   </ItemGroup>
