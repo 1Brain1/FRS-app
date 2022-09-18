@@ -27,8 +27,7 @@ namespace FisticularRiskScore
             if (Text == null)
                 return "";
 
-            ResourceManager resmgr = new ResourceManager(ResourceId,
-            typeof(TranslateExtension).GetTypeInfo().Assembly);
+            ResourceManager resmgr = new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly);
 
             var translation = resmgr.GetString(Text, ci);
 
@@ -41,12 +40,9 @@ namespace FisticularRiskScore
 
         public static string LocalizeHelper(string key)
         {
-            string ret = string.Empty;
-            ResourceManager resmgr = new ResourceManager(ResourceId,
-            typeof(TranslateExtension).GetTypeInfo().Assembly);
-            ret = resmgr.GetString(key, ci);
+            ResourceManager resmgr = new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly);
 
-            return ret;
+            return resmgr.GetString(key, ci);
         }
     }
 }
